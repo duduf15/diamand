@@ -19,7 +19,7 @@ private:
 public:
 
     Piece							();
-    Piece::Piece(int forme, int posX,int posY);
+    Piece							(sf::Texture texture, int posX,int posY);
 	sf::Sprite&	Piece::GetSprite	();
 	void		draw				(sf::RenderWindow* window);
 };
