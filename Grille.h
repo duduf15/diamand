@@ -12,9 +12,11 @@ class Grille
 
 private:
 	std::vector<std::vector<Piece>> grille;
- 
+	sf::Texture  m_gameTexture[4];
+
 public:
-	
+
+	sf::Texture& getTexture(int type);
 	Grille									();
     int			newPiece();
 	void		afficheGrille				(sf::RenderWindow* window);
