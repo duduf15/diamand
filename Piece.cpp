@@ -13,38 +13,13 @@ Piece::Piece()
 
 
  
-Piece::Piece(int forme, int posX,int posY)
+Piece::Piece(sf::Texture texture, int posX,int posY)
 {
     m_posX=posX;
 	m_posY=posY;
-	m_forme=forme;
 	
-	switch (forme)
-	{
-		case 0: 
-		{
-			  m_cheminPiece = "Images/image1.png";
-			  break;
-		}
-		case 1:
-	    {
-			  m_cheminPiece = "Images/image2.png";
-			  break;
-		}
-		case 2:
-	    {
-			   m_cheminPiece = "Images/image3.png";
-			  break;
-		}
-	   case 3:
-	    {
-			   m_cheminPiece = "Images/image4.png";
-			  break;
-		}
-	}
-	
-	m_texture.loadFromFile(m_cheminPiece);
-	m_sprite.setTexture(m_texture);
+
+	m_sprite.setTexture(texture);
 	m_sprite.setPosition( m_posX, m_posY);	
 }
 
